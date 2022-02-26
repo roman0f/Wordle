@@ -1,0 +1,217 @@
+
+
+
+.container{
+			min-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.container > .row{
+			display: flex;
+			flex-direction: row;
+			padding: 0;
+			flex-wrap: wrap;
+		}
+
+		.container > .row > .col-1{
+			flex-basis: 100%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-2{
+			flex-basis: 50%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-3{
+			flex-basis: calc(100% / 3);
+			flex-grow: 1;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-4{
+			flex-basis: 25%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-5{
+			flex-basis: 20%;
+			flex-grow: 0;
+			flex-shrink: 0;
+			padding: 0 10px;
+		}
+
+		.container > .row > .col-6{
+			flex-basis: calc(100% / 6);
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-7{
+			flex-basis: calc(100% / 7);
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-8{
+			flex-basis: calc(100% / 8);
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-9{
+			flex-basis: calc(100% / 9);
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-10{
+			flex-basis: calc(100% / 10);
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-11{
+			flex-basis: calc(100% / 11);
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-12{
+			flex-basis: calc(100% / 12);
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-60perc{
+			flex-basis: 60%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+		.container > .row > .col-75perc{
+			flex-basis: 75%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+		.container > .row > .col-80perc{
+			flex-basis: 80%;
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+
+
+        /*Grid, desktop*/
+
+
+		@media (min-width: 1280px){
+
+			.container{
+						width: 100%;
+						max-width:1007px;
+						margin-left: auto;
+						margin-right: auto;
+
+					}
+
+					.container > .row{
+						display: flex;
+						flex-direction: row;
+						padding: 0;
+						flex-wrap: wrap;
+					}
+
+			.container > .row > .col-2-d{
+				flex-basis: 50%;
+				flex-grow: 0;
+				flex-shrink: 0
+			}
+
+			.container > .row > .col-3-d{
+				flex-basis: calc(100% / 3);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-4-d{
+				flex-basis: 25%;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-5-d{
+				flex-basis: 20%;
+				flex-grow: 0;
+				flex-shrink: 0;
+				padding: 0 10px;
+			}
+
+			.container > .row > .col-6-d{
+				flex-basis: calc(100% / 6);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-7-d{
+				flex-basis: calc(100% / 7);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-8-d{
+				flex-basis: calc(100% / 8);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-9-d{
+				flex-basis: calc(100% / 9);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-10-d{
+				flex-basis: calc(100% / 10);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-11-d{
+				flex-basis: calc(100% / 11);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-12{
+				flex-basis: calc(100% / 12);
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-18perc-d{
+				flex-basis: 18%;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-55perc-d{
+				flex-basis: 55%;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+
+			.container > .row > .col-75perc-d{
+				flex-basis: 75%;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+			.container > .row > .col-80perc-d{
+				flex-basis: 80%;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+		}

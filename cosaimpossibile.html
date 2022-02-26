@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles/grid.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wordle</title>
+	<style type="text/css">
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		.all{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+
+		}
+		.flexrow{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+
+		}
+
+		h1{
+			font-weight: 700;
+            font-size: 36px;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            pointer-events: none;
+		}
+
+		.imglittle{
+			width: 60px;
+
+		}
+
+		.imglittle a{
+			text-decoration: none;
+		}
+
+		header{
+			border-bottom: 1px solid black;
+		}
+
+		.quadrati{
+			width: 62px;
+			box-sizing: border-box;
+			height: 62px;
+			border: 1px solid grey;
+			margin-left: 5px;
+			font-size: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: Helvetica, sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			
+
+		}
+
+		.flexrowquadrati{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.cheat{
+			margin-top: 5px;
+		}
+
+		.letter{
+			    font-family: inherit;
+                font-weight: bold;
+                margin: 0 3px;
+                height: 58px;
+                width: 43px;
+                border-radius: 4px;
+                background-color:#d3d6da;
+                outline: none;
+                box-shadow: none;
+                border: none;
+   
+		}
+		.enter{
+			    font-family: inherit;
+                font-weight: bold;
+                margin: 0 3px;
+                border: none;
+                height: 58px;
+                width: 65px;
+                border-radius: 4px;
+                background-color:#d3d6da;
+		}
+
+		.mrgnbtm{
+			margin-bottom: 8px;
+		}
+
+
+
+		.quadratini{
+	    	margin: 80px 0;
+		}
+
+		.toast{
+			text-align: center;
+			font-size: 40px;
+			color: red;
+			font-weight: 700;
+			position: fixed;
+            width: 100%;
+            background: black;
+
+		}
+
+		.hidden{
+			display: none;
+		}
+
+		.green{
+			background-color: green;
+		}
+		.yellow{
+			background-color: #fde910;
+		}
+		@media(min-width: 768px){
+			.quadratini{
+			      margin: 50px 0;
+		    }
+		}
+
+		
+
+		
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class=" toast hidden">
+	    Non abbastanza lettere
+				
+    </div>
+	<section class="all">
+		<div class="container">
+			<header class="flexrow border">
+
+				<div class="imglittle">
+					<a href="#">
+					<img src="immagini/puntodidomanda.svg" />
+				    </a>
+				</div>
+
+				<div>
+					<h1>WORDLE</h1>
+				</div>
+
+				<div class="imglittle">
+					<a href="#">
+					<img src="immagini/statistic.svg" />
+				    </a>
+
+
+					<a href="#">
+					<img src="immagini/cog.svg" />
+				    </a>
+				</div>
+
+
+				
+
+
+				
+			</header>
+			
+
+			<section class="quadratini">
+				<div class="flexrowquadrati cheat">
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+				</div>
+
+				<div class="flexrowquadrati cheat">
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+				</div>
+
+				<div class="flexrowquadrati cheat">
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+				</div>
+
+				<div class="flexrowquadrati cheat">
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+				</div>
+
+				<div class="flexrowquadrati cheat">
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+				</div>
+
+				<div class="flexrowquadrati cheat">
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+					<div class="quadrati"></div>
+				</div>
+			</section>
+
+
+
+			<section class="tastiera">
+				<div class="flexrowquadrati mrgnbtm">
+					<button class="letter">Q</button>
+					<button class="letter">W</button>
+					<button class="letter">E</button>
+					<button class="letter">R</button>
+					<button class="letter">T</button>
+					<button class="letter">Y</button>
+					<button class="letter">U</button>
+					<button class="letter">I</button>
+					<button class="letter">O</button>
+					<button class="letter">P</button>
+				</div>
+
+				<div class="flexrowquadrati mrgnbtm">
+					<button class="letter">A</button>
+					<button class="letter">S</button>
+					<button class="letter">D</button>
+					<button class="letter">F</button>
+					<button class="letter">G</button>
+					<button class="letter">H</button>
+					<button class="letter">J</button>
+					<button class="letter">K</button>
+					<button class="letter">L</button>
+					
+				</div>
+
+				<div class="flexrowquadrati mrgnbtm">
+					<button class="enter">ENTER</button>
+					<button class="letter">Z</button>
+					<button class="letter">X</button>
+					<button class="letter">C</button>
+					<button class="letter">V</button>
+					<button class="letter">B</button>
+					<button class="letter">N</button>
+					<button class="letter">M</button>
+					<button class="letter"><img src="immagini/cancelletto.svg"></button>
+					
+				</div>
+				
+			</section>
+
+			
+
+
+
+			
+		</div>
+
+		
+	</section>
+
+
+	<script type="text/javascript">
+
+		let i=0;
+		let vocabulary = ["CICCI"]
+		let chosenWord = vocabulary[0]
+		let word = [];
+		let currentRowIndex = 0
+		let currentRow = document.querySelectorAll('.quadratini .flexrowquadrati') [currentRowIndex];
+		let muchcharact = document.querySelector(".toast")
+		let tastiera = document.querySelectorAll("button.letter")
+
+		
+
+
+		function fillLetter(value){
+			word[i]=value;
+			
+			
+			currentRow.children[i].innerHTML = value
+
+
+
+
+
+			i++;
+
+
+
+		}
+
+		function createParola(){
+			let parolautente=""
+			for (let k = 0; k < word.length; k++) {
+					parolautente = parolautente + word[k]
+				}
+			return parolautente	
+		}
+
+		function checkWord(){
+			
+			if (word.length === 5 ) {
+				 if (createParola().toUpperCase() === chosenWord.toUpperCase()) {
+				 	console.log("YUPPI")
+				 	return true
+				 }else {
+				 	console.log("Errato")
+				 	return false 
+				 }
+				
+
+			}else {	
+				muchcharact.classList.remove('hidden')
+				setTimeout(function(){
+					muchcharact.classList.add('hidden')
+				}, 1200)
+			   return false;   
+			}
+			
+
+		}
+
+		function eraseLetter(){
+			
+			if (i>0) {
+				i--
+				word.pop()
+			    currentRow.children[i].innerHTML = ""
+			}
+			
+			
+			
+			
+		}
+
+		function checkKeyCode(e){
+			
+			if ((e>=65 && e<=90)||(e === 8)|| (e === 13)) {
+				return true
+			}else {
+				return false
+
+			}
+
+		}
+		function fattorialecalc(num){
+			 for (let i = num - 1; i >= 1; i--) {
+                num = num * i;
+            }return num;
+        }
+
+    
+        function highlightLetters(){
+        	let charOfWordRight
+
+        	for(let a=0; a<word.length; a++){
+        		for(let v=0; v<word.length; v++){
+        			charOfWordRight = chosenWord[v]
+        			console.log("Confronto fra ", word[a].toUpperCase(), charOfWordRight)
+ 					
+        			if(word[a].toUpperCase() === charOfWordRight){
+        				console.log("ACCENDO")
+        				currentRow.children[a].classList.add("yellow")
+        			}
+        		}
+
+        	}	        	
+
+
+
+        	for (let k=0; k<word.length;k++){
+        		charOfWordRight = chosenWord[k]
+                if (word[k].toUpperCase() === charOfWordRight) {
+                	currentRow.children[k].classList.remove("yellow")
+                	currentRow.children[k].classList.add("green")
+
+
+                	
+                }
+        		
+        	}
+        }
+
+        function changerow(){
+        	if (currentRowIndex<5) {
+        		currentRowIndex=currentRowIndex+1
+        	    currentRow = document.querySelectorAll('.quadratini .flexrowquadrati') [currentRowIndex];
+        	    word= []
+        	    i = 0
+
+        	}
+        	
+        }
+    
+		
+		let callbackT = function(e){
+			console.log("callbackT", e.keyCode)
+			//muchcharact.classList.add("hidden")
+			
+			checkKeyCode(e.keyCode);
+
+			if (checkKeyCode(e.keyCode)) {
+				if (e.key=== 'Enter') {
+					
+					if(checkWord()===true){
+						console.log("GIOCOFINITO")
+					}else if (word.length===5) {
+						highlightLetters()
+					    changerow()
+
+					} 
+						
+					
+				}else if (e.key === 'Backspace') {
+					
+					eraseLetter()
+				}else if (i<5) {
+					
+					fillLetter(e.key);
+				}
+
+			}
+
+			
+			
+			
+
+
+		}
+
+		document.addEventListener('keydown', callbackT)
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+/*
+METTERE QUESTO NELL' HTML
+<meta name="viewport" content="width=device-width">
+Font usati all'interno del sito*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Newsreader&family=Roboto&display=swap');
+.font-josefin{font-family: 'Josefin Sans', sans-serif;}
+.font-newsreader{font-family: 'Newsreader', serif;}
+.font-roboto{font-family: 'Roboto', sans-serif;}
+
+
+.font100{ font-weight: 100; }
+.font200{ font-weight: 200; }
+.font300{ font-weight: 300; }
+.font400, .font-regular, .font-normal{ font-weight: 400; }
+.font500{font-weight: 500;}
+.font600{font-weight: 600;}
+.font700, .font-bold {font-weight: 700;}
+.font800{font-weight: 800;}
+.font900{font-weight: 900;}
+.font-underline{ text-decoration: underline; }
+.font-italic{font-style: italic; }
+/*Dimensioni font*/
+
+/*1font: xs-->16px/ig-->18px*/
+.fontsize1{font-size: 16px;}
+@media(min-width: 1280px){
+	.fontsize1{font-size:18px;}
+}
+
+/*2font: xs-->14px/ig-->14px*/
+.fontsize2{font-size: 14px;}
+
+/*3font: xs-->34px/ig-->52px*/
+.fontsize3{font-size: 34px;
+line-height: 51px;}
+@media(min-width: 1280px){
+	.fontsize3{font-size:52px;
+	line-height: 52px;}
+}
+
+/*4font: xs-->16px/ig-->16px*/
+.fontsize4{font-size: 16px;
+line-height: 16px;}
+
+/*5font: xs-->28px/ig-->46px*/
+.fontsize5{font-size: 28px;}
+@media screen and (min-width: 1280px){
+	.fontsize5{font-size:46px;}
+}
+
+/*Font for latest season part(Per tutta questa parte useremo solo fontsize 6 7 8)*/
+
+/*6font: xs-->20px/ig-->24px*/
+.fontsize6{font-size: 20px;}
+@media(min-width: 1280px){
+	.fontsize6{font-size:24px;}
+}
+
+/*7font: xs-->18px/ig-->15px*/
+.fontsize7{font-size: 18px;}
+@media(min-width: 1280px){
+	.fontsize7{font-size:15px;}
+}
+
+
+/*8font: xs-->12px/ig-->12px*/
+.fontsize8{font-size: 12px;}
+
+/*Questi font verranno usati a ripetizione per tutta questa parte fino a magazine*/
+
+/*9font: xs-->28px/ig-->52px*/
+.fontsize9{font-size: 28px;}
+@media(min-width: 1280px){
+	.fontsize9{font-size:52px;}
+}
+/*Font usato per le immagini della parte magazine*/
+/*10font: xs-->28px/ig-->24px*/
+.fontsize10{font-size: 28px;}
+@media(min-width: 1280px){
+	.fontsize10{font-size:24px;}
+}
+
+/*Fine parte magazine*/
+/*11font: xs-->24px/ig-->16px*/
+.fontsize11{font-size: 24px;}
+@media(min-width: 1280px){
+	.fontsize11{font-size:16px;}
+}
